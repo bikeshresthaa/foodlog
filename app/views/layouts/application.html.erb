@@ -3,6 +3,8 @@
   <head>
     <title><%= content_for(:title) || "Foodlog" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
@@ -23,6 +25,17 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "shared/header" %>
+    <% if notice.present? %>
+      <div class = "notification is-link is-light"><%= notice %></div>
+    <% end %>
+
+    <% if alert.present? %>
+      <div class = "notification is-danger is-light"><%= alert %></div>
+    <% end %>
+
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
