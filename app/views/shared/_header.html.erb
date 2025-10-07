@@ -4,9 +4,9 @@
     <nav class="navbar">
       <div class="container">
         <div class="navbar-brand">
-          <a class="navbar-item">
-            <img src="https://bulma.io/assets/images/bulma-type-white.png" alt="Logo" />
-          </a>
+          <%= link_to root_path, class: "navbar-item" do %>
+            <span class="has-text-weight-bold is-size-4 ml-4">Foodlog</span>
+          <% end %>
           <span class="navbar-burger" data-target="navbarMenuHeroA">
             <span></span>
             <span></span>
@@ -17,7 +17,6 @@
         <div id="navbarMenuHeroA" class="navbar-menu">
           <div class="navbar-end">
             <%= link_to "Create new entry", new_entry_path, class: "button is-success" %>
-            <%  %>
           </div>
         </div>
       </div>
@@ -27,24 +26,14 @@
   <!-- Hero content: will be in the middle -->
   <div class="hero-body">
     <div class="container has-text-centered">
-      <p class="title">Title</p>
-      <p class="subtitle">Subtitle</p>
+      <p class="title">
+        <% if content_for :title %>
+          <%= yield :title %>
+        <% else %>
+          Foodlog
+        <% end %>
+      </p>
     </div>
   </div>
-
-  <!-- Hero footer: will stick at the bottom -->
-  <div class="hero-foot">
-    <nav class="tabs">
-      <div class="container">
-        <ul>
-          <li class="is-active"><a>Overview</a></li>
-          <li><a>Modifiers</a></li>
-          <li><a>Grid</a></li>
-          <li><a>Elements</a></li>
-          <li><a>Components</a></li>
-          <li><a>Layout</a></li>
-        </ul>
-      </div>
-    </nav>
-  </div>
+ 
 </section>
