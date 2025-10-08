@@ -2,7 +2,7 @@ require "test_helper"
 
 class EntriesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @entry = entries(:kera)
+    @entry = entries(:rice)
   end
 
   test "should get index" do
