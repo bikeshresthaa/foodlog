@@ -7,7 +7,7 @@ class ArchivesTest < ApplicationSystemTestCase
   #   assert_selector "h1", text: "Archives"
   # end
   setup do
-    @entry = entries(:kera)
+    @entry = entries(:rice)
   end
 
   test "visiting the archives index" do
