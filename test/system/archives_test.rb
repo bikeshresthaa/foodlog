@@ -14,7 +14,7 @@ class ArchivesTest < ApplicationSystemTestCase
     visit archives_index_url
 
     assert_text "Foodlog"
-    assert_selector "h3", text: "Entries for #{@entry.day.squish}"
+    assert_selector "h3", text: "Entries for #{@entry.day}"
     assert text: @entry.meal_type
   end
 end

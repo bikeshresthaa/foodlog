@@ -6,12 +6,11 @@ rice:
   proteins: 111
   carbohydrates: 134
   fats: 555
-  day: <%= Date.today.strftime("%b %e, %Y") %>
-
+  day: "Oct 8, 2025"
 pork:
   meal_type: "pork"
   calories: 23
   proteins: 89
   carbohydrates: 44
   fats: 213
-  day: <%= Date.today.strftime("%b %e, %Y") %>
+  day: "Oct 8, 2025"
